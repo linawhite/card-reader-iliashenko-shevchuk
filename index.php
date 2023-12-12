@@ -39,5 +39,11 @@
     </script>
 
     <script type="module" src="./script.js" crossorigin="anonymous"></script>
+    
+    <?php
+
+      $myvar = "meera academy";
+      print $myvar;
+      ?>
 </body>
 </html>
