@@ -1,5 +1,5 @@
 <?php
-  if (array_key_exists("id_card", $_GET)) {
+  if (array_key_exists("chip", $_GET)) {
     $json = file_get_contents('data.json');
     $json_data = json_decode($json, true);
 
