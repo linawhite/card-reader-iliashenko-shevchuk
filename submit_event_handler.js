@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const formData = new FormData(form);
         console.log(formData);
-        fetch("http://localhost/card-reader/handle_form.php", {
+        fetch("https://citacka.azurewebsites.net/", {
             method: "POST",
             body: formData,
         })
