@@ -1,16 +1,3 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pin'])) {
-    $inputPin = $_POST['pin'];
-    $data = json_decode(file_get_contents('data.json'), true);
-
-    if ($data['pin'] == $inputPin) {
-        echo "<script>console.log(`Pin ${$inputPin} is correct`);</script>";
-    } else {
-        echo "<script>console.log(`Pin ${$inputPin} is incorrect`);</script>";
-    }
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pin'])) {
 <body>
     <h1>Card reader with ESP</h1>
     <div class="forms-wrapper">
-        <form action="" method="post" name="sign-in">
+        <form action="handle_form.php" method="post" name="sign-in">
             <h2>Sign In</h2>
             <input type="text" name="pin" id="card-id" placeholder="type pin or attach your card">
             <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">

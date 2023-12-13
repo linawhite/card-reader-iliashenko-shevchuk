@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (data.success) {
                     console.log(data);
                     // Do something on success
-                    console.log("Pin is correct!");
+                    alert("Pin is correct!");
                 } else {
                     console.log(data);
 
                     // Do something on failure
-                    console.log("Pin is incorrect!");
+                    alert("Pin is incorrect! Go to sign-up form!!!");
                 }
             })
             .catch((error) => {
