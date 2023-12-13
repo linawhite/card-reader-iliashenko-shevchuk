@@ -39,7 +39,7 @@
         </tr>
     </table>
 
-    <script src="./submit_event_handler.js"></script>
+    <script src="./signin_submit_handler.js"></script>
 
     <script>
         function deleteRow(btn) {
