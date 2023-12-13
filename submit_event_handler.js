@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         const formData = new FormData(form);
         console.log(formData);
-        fetch("https://citacka.azurewebsites.net", {
+        fetch("https://citacka.azurewebsites.net/handle_form.php", {
             method: "POST",
             body: formData,
         })
