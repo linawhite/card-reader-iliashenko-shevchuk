@@ -10,5 +10,5 @@
         }
       }
     
-      echo json_encode(array('succes pin checking' => true));
+      echo json_encode(array('success' => true));
 ?>
