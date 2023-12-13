@@ -11,6 +11,8 @@ h2 {
 div.forms-wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 0 15%;
+    align-items: center;
 }
 
 table {
@@ -45,8 +47,10 @@ h1 {
 
 form {
     max-width: 400px;
-    margin: 20px auto;
+    min-width: 300px;
+    margin-top: 20px;
     padding: 20px;
+    height: 100%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

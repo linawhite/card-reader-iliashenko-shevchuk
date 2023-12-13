@@ -9,6 +9,12 @@
 <body>
   <h1>Card reader with ESP</h1>
   <div class="forms-wrapper">
+  <form action="" method="post" name="sign-in">
+    <h2>Sign In</h2>
+    <input type="text" name="pin" id="card-id" placeholder="type pin or attach your card">
+    <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
+  </form>
+
     <form name="sign-up">
       <h2>Sign Up</h2>
       <input type="text" id="card-id" placeholder="111111111">
@@ -19,10 +25,7 @@
       <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
     </form>
 
-    <form action="" name="sign-in">
-      <h2>Sign In</h2>
-      <input type="text" id="card-id" placeholder="type pin or attach your card">
-    </form>
+    
   </div>
 
   <h2>List of Users</h2>
