@@ -1,10 +1,8 @@
 <?php
-
-// Get the raw input data
     $inputData = $_POST["pin"];
     
     // Read the JSON data from data.json
-    $jsonData = file_get_contents('data.json');
+    $jsonData = file_get_contents('./data.json');
     $data = json_decode($jsonData, true);
     // Compare the submitted PIN with the stored PIN as strings
     if ($inputData === $data['pin']) {
