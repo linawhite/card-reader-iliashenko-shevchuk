@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,7 @@
             <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
         </form>
 
-        <!-- <form name="sign-up">
+        <form name="sign-up">
             <h2>Sign Up</h2>
             <input type="text" id="sign-up-id" placeholder="111111111">
             <input type="text" id="name" placeholder="Type your name">
@@ -24,7 +23,7 @@
             <input type="text" id="age" placeholder="Type your age">
             <input type="text" id="faculty" placeholder="Type your faculty">
             <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
-        </form> -->
+        </form>
     </div>
 
     <h2>List of Users</h2>
