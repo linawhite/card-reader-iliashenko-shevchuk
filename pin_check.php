@@ -4,7 +4,7 @@
         $json_data = json_decode($json, true);
 
         if ($_GET["pin"] != $json_data["pin"] ) {
-            echo json_encode(array('succes pin checking' => false));
+            echo json_encode(array('success' => false));
             return;
 
         }
