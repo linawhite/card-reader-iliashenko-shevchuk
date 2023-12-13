@@ -8,15 +8,22 @@
 </head>
 <body>
   <h1>Card reader with ESP</h1>
-  <form name="sign-up">
-    <h2>Sign Up</h2>
-    <input type="text" id="card-id" placeholder="111111111">
-    <input type="text" id="name" placeholder="Type your name">
-    <input type="text" id="surname" placeholder="Type your surname">
-    <input type="text" id="age" placeholder="Type your age">
-    <input type="text" id="faculty" placeholder="Type your faculty">
-    <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
-  </form>
+  <div class="forms-wrapper">
+    <form name="sign-up">
+      <h2>Sign Up</h2>
+      <input type="text" id="card-id" placeholder="111111111">
+      <input type="text" id="name" placeholder="Type your name">
+      <input type="text" id="surname" placeholder="Type your surname">
+      <input type="text" id="age" placeholder="Type your age">
+      <input type="text" id="faculty" placeholder="Type your faculty">
+      <input type="submit" id="submit" value="SUBMIT" class="edit-btn btn">
+    </form>
+
+    <form action="" name="sign-in">
+      <h2>Sign In</h2>
+      <input type="text" id="card-id" placeholder="type pin or attach your card">
+    </form>
+  </div>
 
   <h2>List of Users</h2>
 

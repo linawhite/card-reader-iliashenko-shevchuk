@@ -8,6 +8,11 @@ h2 {
     color: #333;
 }
 
+.forms-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
