@@ -40,6 +40,7 @@
     </table>
 
     <script src="./signin_submit_handler.js"></script>
+    <script src="./signup_submit_handler.js"></script>
 
     <script>
         function deleteRow(btn) {
