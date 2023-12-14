@@ -1,18 +1,1 @@
-{
-    "users": [
-        {
-            "id": "1234567890",
-            "name": "Lina",
-            "surname": "Iliashenko",
-            "age": "19",
-            "faculty": "FEI"
-        },
-        {
-            "id": "1234984769",
-            "name": "Daria",
-            "surname": "Shevchuk",
-            "age": "18",
-            "faculty": "FEI"
-        }
-    ]
-}
+{}
