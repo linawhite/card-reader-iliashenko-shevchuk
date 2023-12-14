@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Function to get and append data to the existing JSON
     function get_data() {
-        $file_name = 'users.json';
+        $file_name = './users.json';
         $current_data = json_decode(file_get_contents($file_name), true);
         $new_user = array(
             'id' => $_POST['id'], 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Attempt to append the data and save the file
     $response = ['success' => false, 'message' => ''];
-    if(file_put_contents("users.json", get_data())) {
+    if(file_put_contents("./users.json", get_data())) {
         $response['success'] = true;
         $response['message'] = 'File created successfully';
     } else {
