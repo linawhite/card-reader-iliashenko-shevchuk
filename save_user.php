@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Function to get and append data to the existing JSON
     function get_data() {
-        $file_name = './users.json';
+        $file_name = 'users.json';
         $current_data = json_decode(file_get_contents($file_name), true);
         $new_user = array(
             'id' => $_POST['id'], 

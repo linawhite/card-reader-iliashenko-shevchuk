@@ -27,22 +27,3 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
-
-// function submitForm(event) {
-//     event.preventDefault();
-
-//     // Get the pin value from the input
-//     const pinInput = document.getElementById('card-id');
-//     const pin = pinInput.value;
-
-//     // Send a request to the server
-//     fetch('handle_form.php', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({ pin }),
-//     })
-//     c
-//     });
-//
