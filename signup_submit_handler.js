@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('form[name="sign-in"]'); //correct
+    const form = document.querySelector('form[name="sign-up"]');
     form.addEventListener("submit", function (event) {
         event.preventDefault();
+
+        // Collect form data
         const formData = new FormData(form);
-        console.log(formData);
-        fetch("https://citacka.azurewebsites.net/handle_form.php", {
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
+        });
+
+        // Send data to the server
+        fetch("save_user.php", {
             method: "POST",
-            body: formData,
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formDataObject),
         })
             .then((response) => response.json())
             .then((data) => {
-                // Handle the response from the server
-                if (data.success) {
-                    console.log(data);
-                    // Do something on success
-                    alert("Pin is correct!");
-                } else {
-                    console.log(data);
-
-                    // Do something on failure
-                    alert("Pin is incorrect! Go to sign-up form!!!");
-                }
+                console.log("Success:", data);
             })
             .catch((error) => {
                 console.error("Error:", error);
