@@ -1,15 +1,34 @@
-<!-- <?php
-// Read existing data from users.json
-$json = file_get_contents('users.json');
-$data = json_decode($json, true);
 
-// Add new user data
-$newUserData = json_decode(file_get_contents('php://input'), true);
-$data['users'][] = $newUserData;
-
-// Save the updated data back to users.json
-file_put_contents('users.json', json_encode($data));
-
-// Respond with success
-echo json_encode(['success' => true]);
-?> -->
+<?php 
+    
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
+          
+        function get_data() { 
+            // "id": "1234567890",
+            // "name": "Lina",
+            // "surname": "Iliashenko",
+            // "age": "19",
+            // "age": "FEI"
+            $datae = array(); 
+            $datae[] = array( 
+                'id' => $_POST['id'], 
+                'name' => $_POST['name'], 
+                'surname' => $_POST['surname'], 
+                'age' => $_POST['age'], 
+                'age' => $_POST['age'], 
+            ); 
+            return json_encode($datae); 
+        } 
+          
+        $name = "users"; 
+        $file_name = $name . '.json'; 
+       
+        if(file_put_contents( 
+            "$file_name", get_data())) { 
+                echo $file_name .' file created'; 
+            } 
+        else { 
+            echo 'There is some error'; 
+        } 
+    } 
+?> 
