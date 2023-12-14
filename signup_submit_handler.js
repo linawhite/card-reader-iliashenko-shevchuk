@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('form[name="sign-up"]'); //correct
+    const form = document.querySelector('form[name="sign-up"]');
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         const formData = new FormData(form);
-        console.log(formData);
+
+        // Log FormData contents (for debugging)
+        formData.forEach((value, key) => {
+            console.log(key, value);
+        });
+
         fetch("https://citacka.azurewebsites.net/save_user.php", {
             method: "POST",
             body: formData,
@@ -13,13 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Handle the response from the server
                 if (data.success) {
                     console.log(data);
-                    // Do something on success
                     alert("works");
                 } else {
                     console.log(data);
-
-                    // Do something on failure
-                    alert("doesnt work");
+                    alert("doesn't work");
                 }
             })
             .catch((error) => {
@@ -27,22 +29,3 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
-
-// function submitForm(event) {
-//     event.preventDefault();
-
-//     // Get the pin value from the input
-//     const pinInput = document.getElementById('card-id');
-//     const pin = pinInput.value;
-
-//     // Send a request to the server
-//     fetch('handle_form.php', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({ pin }),
-//     })
-//     c
-//     });
-//
