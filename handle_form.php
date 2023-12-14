@@ -17,7 +17,7 @@
         $response = ['success' => true];
     } else if (in_array($inputData, $ids)) {
         // If inputData is found in the ids array
-        $response = ['success' => true, 'message' => 'ID found'];
+        $response = ['success' => true];
     } else {
         // If inputData is not found in the ids array and it's not equal to the stored pin
         $response = ['success' => false];
