@@ -12,6 +12,8 @@
         $ids[] = $user['id'];
     }
 
+    echo '<script>console.log(' . json_encode($ids) . ');</script>';
+
     // Compare the submitted PIN with the stored PIN as strings
     if ($inputData === $data['pin']) {
         $response = ['success' => true];
